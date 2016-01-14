@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('spark::welcome');
 });
 
 /*
@@ -26,6 +26,9 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('home', ['middleware' => 'auth', function () {
+        return view('home');
+    }]);
 });

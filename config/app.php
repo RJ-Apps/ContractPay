@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'SomeRandomString'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => 'single',
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +155,13 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
 
+        /**
+         * Spark Service Providers...
+         */
+        Laravel\Spark\Providers\SparkServiceProvider::class,
+        App\Providers\SparkServiceProvider::class,
     ],
 
     /*
@@ -185,6 +191,8 @@ return [
         'File'      => Illuminate\Support\Facades\File::class,
         'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
+        'Input'     => Illuminate\Support\Facades\Input::class,
+        'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,
         'Log'       => Illuminate\Support\Facades\Log::class,
         'Mail'      => Illuminate\Support\Facades\Mail::class,

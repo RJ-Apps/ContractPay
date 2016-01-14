@@ -98,7 +98,7 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'email' => 'auth.emails.password',
+            'email' => 'spark::emails.auth.password.email',
             'table' => 'password_resets',
             'expire' => 60,
         ],

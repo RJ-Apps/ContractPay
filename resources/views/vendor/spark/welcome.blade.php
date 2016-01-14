@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>{{env('APP_TITLE')}}</title>
 
     <!-- Fonts -->
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
@@ -28,7 +28,7 @@
         <div class="row splash-nav">
             <div class="col-md-10 col-md-offset-1">
                 <div class="pull-left splash-brand">
-                    <i class="fa fa-btn fa-sun-o"></i>Laravel Spark
+                    <i class="fa fa-btn fa-dollar"></i>{{env('APP_TITLE')}}
                 </div>
 
                 <div class="navbar-header">

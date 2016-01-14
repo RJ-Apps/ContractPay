@@ -33,6 +33,12 @@ class CreateUsersTable extends Migration
             $table->string('card_last_four', 4)->nullable();
             $table->text('extra_billing_info')->nullable();
 
+            //Stripe Columns
+            $table->string('stripe_managed_account_id');
+            $table->string('stripe_public_key');
+            $table->string('stripe_secret_key');
+            $table->boolean('isVerified');
+
             $table->timestamps();
         });
     }
